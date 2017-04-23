@@ -1,0 +1,36 @@
+Datenbank-Tabellen:
+    user
+        id
+        email
+        password
+        ...
+
+    game
+        id
+        player1 -> userID
+        player2 -> userID
+        whoseTurn -> userID
+        shipListOfPlayer1 -> shipListId
+        shipListOfPlayer2 -> shipListId
+        hitListOfPlayer1 -> hitListID
+        hitListOfPlayer2 -> hitListID
+        winner -> userID
+        gameOverConfirmedByPlayer1 -> bool
+        gameOverConfirmedByPlayer2 -> bool
+        gaveUpByPlayer -> userID or (-1)
+
+    shipList
+        id
+
+    ship
+        id
+        shipListId
+        location
+
+    hitList
+        id
+
+    hit
+        id
+        hitListId
+        location
