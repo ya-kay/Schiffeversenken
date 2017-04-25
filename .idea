@@ -1,6 +1,7 @@
 Datenbank-Tabellen:
     user
         id
+        username
         email
         password
         ...
