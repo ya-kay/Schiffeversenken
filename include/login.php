@@ -12,11 +12,12 @@
     </head>
     <body>
         <div class="container center">
-            <h1>Login</h1>
-            <b>Gibt einen Benutzernamen ein</b>
-            <form method="post" action="index.php">
-                <input type="text" name="username" palceholder="Nickname" />
-                <input class="btn btn-primary" type="submit" value="Weiter" />
+            <h1>Login / Registrieren</h1>
+            <form method="post" action="/index.php">
+                <input type="text" name="username" placeholder="Nickname" />
+                <input type="password" name="password" placeholder="Passwort" />
+                <input class="btn btn-primary" type="submit" name="login" value="Login" />
+                <input class="btn btn-primary" type="submit" name="reg" value="Registrieren" />
             </form>
         </div>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
