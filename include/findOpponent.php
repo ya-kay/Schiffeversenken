@@ -17,11 +17,31 @@
                     <h3 class="panel-title">Bestehender Partie beitreten</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="list-group">
-                        <button type="button" class="list-group-item">#1 gg. SpielerX</button>
-                        <button type="button" class="list-group-item">#2 gg. SpielerY</button>
-                        <button type="button" class="list-group-item">#3 gg. SpielerZ</button>
-                    </div>
+                    <?php
+                    $q = mysql_query("
+                        SELECT
+                            game.id,
+                            user.username
+                        FROM
+                            game,
+                            user
+                        WHERE
+                            game.player1 = user.id
+                        AND
+                            game.player2 IS NULL
+                        AND
+                            game.player1 != '" . $user->id . "'
+                    ");
+                    if(mysql_num_rows($q) > 0){
+                        echo '<div class="list-group">';
+                        while($a = mysql_fetch_array($q)){
+                            echo '<a href="index.php?joinMatch=' . $a[0] . '"><button type="button" class="list-group-item">#' . $a[0] . ' vs. ' . $a[1] . '</button></a>';
+                        }
+                        echo '</div>';
+                    } else {
+                        echo 'Keine aktiven Spiele vorhanden!';
+                    }
+                    ?>
                 </div>
             </div>
 
@@ -31,8 +51,8 @@
                 </div>
                 <div class="panel-body">
                     <div class="list-group">
-                        <a href="#"><button type="button" class="list-group-item">Spiel gegen Computer starten</button></a>
-                        <button type="button" class="list-group-item">Spiel gegen echten gegner starten</button>
+                        <a href="index.php?createPCMatch=true"><button type="button" class="list-group-item">Spiel gegen Computer starten</button></a>
+                        <a href="index.php?createRealMatch=true"><button type="button" class="list-group-item">Spiel gegen echten gegner starten</button></a>
                     </div>
                 </div>
             </div>
