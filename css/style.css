@@ -24,6 +24,19 @@ button.list-group-item:focus{
   margin: 0.5px;
 }
 
+.remainShips .remainShipsUsed-1{
+  opacity: 0.2;
+}
+.remainShips .remainShipsUsed-2{
+  opacity: 0.2;
+}
+.remainShips .remainShipsUsed-3{
+  opacity: 0.2;
+}
+.remainShips .remainShipsUsed-4{
+  opacity: 0.2;
+}
+
 .remainShips .countShips{
   text-align: left;
 }

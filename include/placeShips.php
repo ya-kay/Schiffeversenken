@@ -22,7 +22,7 @@
                             <td class="bg-primary"></td>
                             <?php
                                 for($i=0;$i<10;$i++){
-                                    echo '<td class="bg-primary">' . chr(65 + $i) . '</td>';
+                                    echo '<td class="bg-primary shipPlace">' . chr(65 + $i) . '</td>';
                                 }
                             ?>
                         </tr>
@@ -46,12 +46,19 @@
             </div>
 
             <div class="remainShips">
-              <div class="row remainShips-2">
+              <div class="row">
                 <div class="col-sm-3">
-                  <div class="row">
+                  <div class="row remainShips-1">
+                    <div class="col-sm-2"></diV>
+                    <div class="col-sm-2 remainShip"></div>
+                    <div class="col-sm-6 countShips">1</div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="row remainShips-2">
                     <div class="col-sm-2 remainShip"></div>
                     <div class="col-sm-2 remainShip"></div>
-                    <div class="col-sm-6 countShips">3</div>
+                    <div class="col-sm-6 countShips">3 <!-- echo Datenbank--></div>
                   </div>
                 </div>
                 <div class="col-sm-3">
@@ -59,7 +66,7 @@
                     <div class="col-sm-2 remainShip"></div>
                     <div class="col-sm-2 remainShip"></div>
                     <div class="col-sm-2 remainShip"></div>
-                    <div class="col-sm-4 countShips">2</div>
+                    <div class="col-sm-4 countShips">2 </div>
                   </div>
                 </div>
                 <div class="col-sm-3">
@@ -69,16 +76,6 @@
                     <div class="col-sm-2 remainShip"></div>
                     <div class="col-sm-2 remainShip"></div>
                     <div class="col-sm-2 countShips">2</div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="row remainShips-5">
-                    <div class="col-sm-2 remainShip"></div>
-                    <div class="col-sm-2 remainShip"></div>
-                    <div class="col-sm-2 remainShip"></div>
-                    <div class="col-sm-2 remainShip"></div>
-                    <div class="col-sm-2 remainShip"></div>
-                    <div class="col-sm-1 countShips">1</div>
                   </div>
                 </div>
               </div>
@@ -104,7 +101,36 @@
                     console.log(ships);
                     $.post("/index.php", {placedShips: ships});
                 });
-            });
+
+            //     var remainShips1 = 1;        //Anzahl der verbleibenden Boote für jeweilige Felder
+            //     var remainShips2 = 3;
+            //     var remainShips3 = 2;
+            //     var remainShips4 = 2;
+            //
+            //
+            //     status1 = 0;               //Status der überprüft ob ein Boot ausgewählt ist
+            //     status2= 0;
+            //     status3 = 0;
+            //     status4 = 0;
+            //
+            //     $(".remainShips-1").on('click', function(){        //Boot auswählen Status auf 1 setzten
+            //       alert('Schiff in der Tabelle platzieren');
+            //       status1 = 1;
+            //     });
+            //
+            //       $(".TABELLENFELD").on('click', function(){             // wenn Status = 1, dann verbleibende Schiffe -1 setzten
+            //         if (status == 1){                                       wenn verbleibende Schiffe = 0, dann Klasse mit opacity 0.2 adden
+            //         remainShips1 -= 1;
+            //         if (remainShips1 == 0){
+            //           $(".remainShips-1").addClass("remainShipsUsed-1");
+            //         }
+            //       } else {
+            //         alert("Bitte erst Schiff wählen!");                // wenn Status = 0, muss erst ein Schiffgewählt werden bevor man setzten kann
+            //       }
+            //     });
+            // });
+
+            // Zusätlich später, wenn Schiff neben bereits vorhandenden Schiff sitzt, kurz rotaufleuchten und Schiff nicht setzten, ggf. Fehlermeldung ausgeben
         </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
