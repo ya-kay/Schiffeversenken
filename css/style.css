@@ -8,3 +8,7 @@ body {
 table.placeShips {
     cursor: pointer;
 }
+
+button.list-group-item:focus{
+  outline: none;
+}
