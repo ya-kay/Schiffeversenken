@@ -12,3 +12,18 @@ table.placeShips {
 button.list-group-item:focus{
   outline: none;
 }
+
+
+/* remainShips*/
+.remainShips{
+  margin-left: 15px;
+}
+.remainShips .remainShip{
+  background-color: black;
+  height: 20px;
+  margin: 0.5px;
+}
+
+.remainShips .countShips{
+  text-align: left;
+}
