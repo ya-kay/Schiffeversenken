@@ -1,6 +1,7 @@
 <?php
 include("php/connect.php");
 include("php/user.php");
+include("php/game.php");
 
 $user = new User();
 if(!$user->logged_in){
@@ -18,8 +19,8 @@ if(!$user->logged_in){
     include("include/login.php");
 } else {
     if(gameExists()){
-        $game = getGameInfos();
-        if(!$game->areShipsPlaced()){
+        $game = getGame();
+        if(!$game->areAllShipsPlaced()){
             include("include/placeShips.php");
         } else {
             if(!$game->isGameOverConfirmed()){
@@ -63,9 +64,9 @@ function gameExists(){
     ");
     return mysql_num_rows($q) == 1;
 }
-function getGameInfos(){
+function getGame(){
     //lädt Daten aus Datenbank, die als PHP-Objekt returned werden.
-
-    return null;
+    $g = new Game();
+    return $g;
 }
 ?>
