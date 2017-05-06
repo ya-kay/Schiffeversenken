@@ -14,5 +14,14 @@ class Game{
     public function areAllShipsPlaced(){
         return false;
     }
+
+    public function checkPlacedShips($ships){
+        //Schiffpositionen sind im Array $ships gespeichert
+        //for($i=0;$i<count($ships);$i++){
+        //    echo $ships[$i] . " - ";
+        //}
+
+        //return true/false;
+    }
 }
 ?>

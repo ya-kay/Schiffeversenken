@@ -20,7 +20,9 @@ if(!$user->logged_in){
 } else {
     if(gameExists()){
         $game = getGame();
-        if(!$game->areAllShipsPlaced()){
+        if(isset($_POST['placedShips'])){
+            $game->checkPlacedShips($_POST['placedShips']);
+        } elseif(!$game->areAllShipsPlaced()) {
             include("include/placeShips.php");
         } else {
             if(!$game->isGameOverConfirmed()){

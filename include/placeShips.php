@@ -63,7 +63,7 @@
                         }
                     }
                     console.log(ships);
-                    $.post("/index.php", {s: ships});
+                    $.post("/index.php", {placedShips: ships});
                 });
             });
         </script>
