@@ -35,3 +35,20 @@ Datenbank-Tabellen:
         id
         hitListId
         location
+
+
+Regeln:
+
+
+    1 Schlachtschiff (5 Treffer nötig zum Versenken)
+    1 Kreuzer (4 Treffer nötig zum Versenken)
+    2 Fregatten (3 Treffer nötig zum Versenken)
+    1 Minensucher (2 Treffer nötig zum Versenken)
+
+    Folgende Spielregeln müssen eingehalten werden:
+
+    Die Schiffe dürfen nicht aneinander stoßen
+    Die Schiffe dürfen nicht über Eck gebaut sein oder Ausbuchtungen besitzen.
+    Die Schiffe dürfen auch am Rand liegen.
+    Die Schiffe dürfen nicht diagonal aufgestellt werden.
+    Jeder verfügt über insgesamt 5 Schiffe (in Klammern die Größe):
